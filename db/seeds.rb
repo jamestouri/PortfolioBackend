@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'date'
 
-dates = [Date.new, Date.new + 1, Date.new + 3, Date.new - 1, Date.new + 2]
+dates = [Date.today, Date.today + 1, Date.today + 3, Date.today - 1, Date.today + 2]
 company = ['Apple', 'Google', 'Facebook', 'Amazon', 'Microsoft']
 cost = [10, 100, 200, 400, 123]
 quantity = [20, 30, 300, 250, 400]

@@ -4,8 +4,9 @@ class Api::InvestmentsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @investments = Investment.where(date_of_trade: date_of_trade_params,
-                                    date_created: date_created_params)
+    @investments = Investment.where(["date_of_trade = ? and date_created = ?",
+                                    date_of_trade_params,
+                                    date_created_params])
     render :json => @investments.to_json( :only => [:company, :quantity, :cost])
   end
 
